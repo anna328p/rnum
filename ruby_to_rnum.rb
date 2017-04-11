@@ -10,6 +10,5 @@ rescue SystemCallError
     abort "File #{ARGV[0]} cannot be read."
 end
 
-program.tr! '^0-9', ''
 Base10 = BaseX.new("0123456789")
-eval Base10.decode program
+puts Base10.encode program
